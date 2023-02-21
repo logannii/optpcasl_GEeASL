@@ -733,7 +733,7 @@ def get_protocol_properties(params):
     totalLDs = params['totalLDs']
     delaylins = params['delaylins']
 
-    nomvc_gt_cbf = np.tile(np.linspace(params['cbfRange'][0],params['cbfRange'][0],dim),(dim,1))
+    nomvc_gt_cbf = np.tile(np.linspace(params['cbfRange'][0],params['cbfRange'][1],dim),(dim,1))
     nomvc_gt_att = np.tile(np.reshape(np.linspace(params['attRange'][0],params['attRange'][1],dim),[dim,1]),(1,dim))
     nomvc_gt_atta = np.zeros(nomvc_gt_cbf.shape)
     nomvc_gt_abv = np.zeros(nomvc_gt_cbf.shape)
@@ -1064,7 +1064,7 @@ def set_dataframe(params):
 
     noiseSD = set_noise(params,SNR=params['SNR'])
     dim = params['nSamp']
-    nomvc_gt_cbf = np.tile(np.linspace(params['cbfRange'][0],params['cbfRange'][0],dim),(dim,1))
+    nomvc_gt_cbf = np.tile(np.linspace(params['cbfRange'][0],params['cbfRange'][1],dim),(dim,1))
     nomvc_gt_att = np.tile(np.reshape(np.linspace(params['attRange'][0],params['attRange'][1],dim),[dim,1]),(1,dim))
     nomvc_gt_atta = np.zeros(nomvc_gt_cbf.shape)
     nomvc_gt_abv = np.zeros(nomvc_gt_cbf.shape)
